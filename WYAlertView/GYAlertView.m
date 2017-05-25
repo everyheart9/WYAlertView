@@ -1,5 +1,5 @@
 //
-//  GYAlertView.m
+//  WYAlertView.m
 //  HS_Consumer_HE
 //
 //  Created by admin on 16/5/31.
@@ -20,11 +20,11 @@
 #define topMargin 15.0f
 #define btnBottommargin 15.0f
 
-#define GYAlertView_Tag 1999
+#define WYAlertView_Tag 1999
 
-#import "GYAlertView.h"
+#import "WYAlertView.h"
 
-@interface GYAlertView ()
+@interface WYAlertView ()
 
 @property (nonatomic, copy) dispatch_block_t cancleBlock;
 @property (nonatomic, copy) dispatch_block_t confirmBlock;
@@ -36,36 +36,36 @@
 
 @end
 
-@implementation GYAlertView
+@implementation WYAlertView
 
-+ (GYAlertView*)showMessage:(NSString*)message
++ (WYAlertView*)showMessage:(NSString*)message
 {
-    GYAlertView* alertView = [[GYAlertView alloc] initWithMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:nil color:confirmBtnColor];
+    WYAlertView* alertView = [[WYAlertView alloc] initWithMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:nil color:confirmBtnColor];
     [alertView show];
     return alertView;
 }
 
-+ (GYAlertView*)showMessage:(NSString*)message confirmBlock:(dispatch_block_t)confirmBlock
++ (WYAlertView*)showMessage:(NSString*)message confirmBlock:(dispatch_block_t)confirmBlock
 {
-    GYAlertView* alertView = [[GYAlertView alloc] initWithMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:confirmBlock color:confirmBtnColor];
+    WYAlertView* alertView = [[WYAlertView alloc] initWithMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:confirmBlock color:confirmBtnColor];
     [alertView show];
     return alertView;
 }
 
-+ (GYAlertView*)showMessage:(NSString*)message cancleBlock:(dispatch_block_t)cancleBlock confirmBlock:(dispatch_block_t)confirmBlock
++ (WYAlertView*)showMessage:(NSString*)message cancleBlock:(dispatch_block_t)cancleBlock confirmBlock:(dispatch_block_t)confirmBlock
 {
-    GYAlertView* alertView = [[GYAlertView alloc] initWithMessage:message cancleButtonTitle:cancleBtnTitle confirmButtonTitle:confirmBtnTitle cancleBlock:cancleBlock confirmBlock:confirmBlock color:confirmBtnColor];
+    WYAlertView* alertView = [[WYAlertView alloc] initWithMessage:message cancleButtonTitle:cancleBtnTitle confirmButtonTitle:confirmBtnTitle cancleBlock:cancleBlock confirmBlock:confirmBlock color:confirmBtnColor];
     [alertView show];
     return alertView;
 }
 
-+ (GYAlertView*)showMessage:(NSString*)message
++ (WYAlertView*)showMessage:(NSString*)message
           cancleButtonTitle:(NSString*)cancleTitle
          confirmButtonTitle:(NSString*)confirmTitle
                 cancleBlock:(dispatch_block_t)cancleBlock
                confirmBlock:(dispatch_block_t)confirmBlock
 {
-    GYAlertView* alertView = [[GYAlertView alloc] initWithMessage:message
+    WYAlertView* alertView = [[WYAlertView alloc] initWithMessage:message
                                                 cancleButtonTitle:cancleTitle
                                                confirmButtonTitle:confirmTitle
                                                       cancleBlock:cancleBlock
@@ -75,47 +75,47 @@
     return alertView;
 }
 
-+ (GYAlertView*)showAttributedMessage:(NSAttributedString*)message confirmBlock:(dispatch_block_t)confirmBlock
++ (WYAlertView*)showAttributedMessage:(NSAttributedString*)message confirmBlock:(dispatch_block_t)confirmBlock
 {
-    GYAlertView* alertView = [[GYAlertView alloc] initWithAttributedMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:confirmBlock color:confirmBtnColor];
+    WYAlertView* alertView = [[WYAlertView alloc] initWithAttributedMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:confirmBlock color:confirmBtnColor];
     [alertView show];
     return alertView;
 }
 
-+ (GYAlertView*)showAttributedMessageWithLeft:(NSAttributedString*)message confirmBlock:(dispatch_block_t)confirmBlock {
-    GYAlertView* alertView = [[GYAlertView alloc] initWithAttributedMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:confirmBlock color:confirmBtnColor];
++ (WYAlertView*)showAttributedMessageWithLeft:(NSAttributedString*)message confirmBlock:(dispatch_block_t)confirmBlock {
+    WYAlertView* alertView = [[WYAlertView alloc] initWithAttributedMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:confirmBlock color:confirmBtnColor];
     alertView.messageLabel.textAlignment = NSTextAlignmentLeft;
     [alertView show];
     
     return alertView;
 }
 
-+ (GYAlertView*)showAttributedMessage:(NSAttributedString*)message cancleButtonTitle:(NSString*)cancleTitle
++ (WYAlertView*)showAttributedMessage:(NSAttributedString*)message cancleButtonTitle:(NSString*)cancleTitle
                    confirmButtonTitle:(NSString*)confirmTitle
                           cancleBlock:(dispatch_block_t)cancleBlock
                          confirmBlock:(dispatch_block_t)confirmBlock {
     
-    GYAlertView* alertView = [[GYAlertView alloc] initWithAttributedMessage:message cancleButtonTitle:cancleTitle confirmButtonTitle:confirmTitle cancleBlock:cancleBlock confirmBlock:confirmBlock color:confirmBtnColor];
+    WYAlertView* alertView = [[WYAlertView alloc] initWithAttributedMessage:message cancleButtonTitle:cancleTitle confirmButtonTitle:confirmTitle cancleBlock:cancleBlock confirmBlock:confirmBlock color:confirmBtnColor];
     [alertView show];
     return alertView;
 
 }
 
 //自定义颜色方法
-+ (GYAlertView*)showMessage:(NSString*)message withColor:(UIColor*)color {
-    GYAlertView* alertView = [[GYAlertView alloc] initWithMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:nil color:color];
++ (WYAlertView*)showMessage:(NSString*)message withColor:(UIColor*)color {
+    WYAlertView* alertView = [[WYAlertView alloc] initWithMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:nil color:color];
     [alertView show];
     return alertView;
 }
 
-+ (GYAlertView*)showMessage:(NSString*)message confirmBlock:(dispatch_block_t)confirmBlock withColor:(UIColor*)color {
-    GYAlertView* alertView = [[GYAlertView alloc] initWithMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:confirmBlock color:color];
++ (WYAlertView*)showMessage:(NSString*)message confirmBlock:(dispatch_block_t)confirmBlock withColor:(UIColor*)color {
+    WYAlertView* alertView = [[WYAlertView alloc] initWithMessage:message cancleButtonTitle:nil confirmButtonTitle:confirmBtnTitle cancleBlock:nil confirmBlock:confirmBlock color:color];
     [alertView show];
     return alertView;
 }
 
-+ (GYAlertView*)showMessage:(NSString*)message cancleBlock:(dispatch_block_t)cancleBlock confirmBlock:(dispatch_block_t)confirmBlock withColor:(UIColor*)color {
-    GYAlertView* alertView = [[GYAlertView alloc] initWithMessage:message cancleButtonTitle:cancleBtnTitle confirmButtonTitle:confirmBtnTitle cancleBlock:cancleBlock confirmBlock:confirmBlock color:color];
++ (WYAlertView*)showMessage:(NSString*)message cancleBlock:(dispatch_block_t)cancleBlock confirmBlock:(dispatch_block_t)confirmBlock withColor:(UIColor*)color {
+    WYAlertView* alertView = [[WYAlertView alloc] initWithMessage:message cancleButtonTitle:cancleBtnTitle confirmButtonTitle:confirmBtnTitle cancleBlock:cancleBlock confirmBlock:confirmBlock color:color];
     [alertView show];
     return alertView;
 }
@@ -276,13 +276,13 @@
 {
     [kKeyWindow endEditing:YES];
 
-    GYAlertView* oldView = [kKeyWindow viewWithTag:GYAlertView_Tag];
+    WYAlertView* oldView = [kKeyWindow viewWithTag:WYAlertView_Tag];
     if (oldView) {
         [oldView dismissAlert];
     }
 
     [kKeyWindow addSubview:self];
-    self.tag = GYAlertView_Tag;
+    self.tag = WYAlertView_Tag;
 }
 
 - (UIView*)backgroundView
